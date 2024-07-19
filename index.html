@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOE</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@500&display=swap');
+    .banner{
+        background-image: url(assets/Mask\ Group\ 3.png);
+        width: 100%;
+        /* background-position: center; */
+        /* background-attachment: fixed; */
+        /* height: 850px; */
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    nav{
+        border-radius: 0px 0px 13px 13px;
+    }
+    .nav-link{
+        padding: 20px 15px !important;
+    }
+    .navbar-light .navbar-nav .active > .nav-link{
+        color: rgb(1, 107, 200);
+    }
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: rgb(1, 107, 200);
+    }
+    .txt{
+        color: white;
+        padding: 25% 0%;
+    }
+    .txt1{
+        font-size: 41px;
+        font-weight: bold;
+        font-family: 'Kalnia', serif;
+    }
+    .txt2{
+        font-size: 35px;
+        font-weight: bold;
+        font-family: 'Kalnia', serif;
+        color: #016bc8;
+    }
+    .txt3{
+      font-family: 'Kalnia', serif;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .txt4{
+        font-weight: bold;
+        font-family: 'Kalnia', serif;
+        color: white;
+    }
+
+    .ct{
+      font-family: 'Kalnia', serif;
+      font-weight: bold;
+      font-size: 25px;
+      color: #04d2c8;
+    }
+    .se{
+      color: #04d2c8;
+    }
+    .se i{
+      font-size: 20px;
+      bottom: 26px;
+      position: absolute;
+    }
+
+    .btn1{
+        padding: 10px;
+        background-color: #04d2c8;
+        color: white;
+        width: 220px;
+        font-size: smaller;
+    }
+    .btn2{
+        padding: 10px;
+        background-color: #04d2c8;
+        color: white;
+        width: 150px;
+        font-size: smaller;
+    }
+    .svg1{
+      position: absolute;
+      margin-top: 48px;
+      width: 40%;
+
+    }
+    .line{
+      position: relative;
+    }
+    .line::after{
+      /* border: 1px solid red; */
+      width: 80px;
+      content:"";
+      height: 2px;
+      background-color: black;
+      display: block;
+      position: absolute;
+      left: 22%;
+      top: 50%;
+    }
+    .line1{
+      position: relative;
+      /* width: 100%; */
+    }
+    .line1::after{
+      /* border: 1px solid red; */
+      width: 80px;
+      content:"";
+      height: 2px;
+      background-color: black;
+      display: block;
+      position: absolute;
+      left: 35%;
+      top: 50%;
+      margin: auto;
+    }
+    .line1::before{
+      /* border: 1px solid red; */
+      width: 80px;
+      content:"";
+      height: 2px;
+      background-color: black;
+      display: block;
+      position: absolute;
+      right: 35%; 
+      top: 50%;
+      margin: auto;
+    }
+    .line2{
+      position: relative;
+    }
+    .line2::after{
+      /* border: 1px solid red; */
+      width: 80px;
+      content:"";
+      height: 2px;
+      background-color: black;
+      display: block;
+      position: absolute;
+      left: 17%;
+      top: 50%;
+    }
+    .box{
+      background-color: white;
+      border: 1px solid #d5d5d5;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 14px 0 rgba(0, 0, 0, 0.19);
+    }
+    .books{
+      position: absolute;
+      right: -16%;
+      top: 35%;
+      width: 120px;
+    }
+    .rec{
+      width: 250px;
+      left: 28%;
+      position: absolute;
+    }
+    .rect{
+      left: 65%;
+      position: absolute;
+      z-index: -1;
+      top: -13%;
+      width: 40%;
+    }
+    .cont{
+        background-image: url(assets/Group\ 130.png);
+        width: 100%;
+        background-position: center;
+        /* background-attachment: fixed; */
+        /* height: 850px; */
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    .co{
+      padding: 80px 0px 70px 70px;
+    }
+    .cn{
+      position: absolute;
+      bottom: 4%;
+      width: 100%;
+      text-align: center;
+    }
+    .num{
+      position: absolute;
+      transform: translateY(-50%);
+      color: white;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1px;
+      font-size: 50px;
+      font-family: 'Kalnia', serif;
+    }
+    .cr{
+      padding: 0px 15px;
+    }
+    .ev img{
+      position: absolute;
+    }
+    .bac{
+      right: 0;
+      width: 40%;
+      bottom: 0;
+    }
+    .bok{
+      /* position: absolute; */
+      left: 8%;
+      Bottom: 20%;
+      width: 120px;
+    }
+    .fr{
+      background-image: url(assets/Mask\ Group\ 4.png);
+        width: 100%;
+        background-position: center;
+        /* background-attachment: fixed; */
+        /* height: 850px; */
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    @media screen and (max-width:1200px) {
+      .txt1{
+        font-size: 30px;
+      }
+      .txt{
+        padding: 10% 0;
+      }
+      .txt2{
+        font-size: 30px;
+      }
+      .line::after{
+        left: 27%;  
+      }
+      .rect{
+        left: 61%;
+        top: -6%;
+      }
+      .line2::after{
+        left: 20%;
+      }
+      .bok{
+        left: 1%;
+      }
+      .books{
+        right: -19%;
+      }
+      .svg1{
+        width: 550px;
+      }
+    }    
+
+    @media screen and (max-width:991px) {
+      .txt1{
+        font-size: 30px;
+      }
+      .txt{
+        padding: 10% 0;
+      }
+      .line::after{
+        left: 18%;  
+      }
+      .svg1{
+        width: 400px;
+      }
+      .co {
+        padding: 60px 0px 50px 50px;
+      }
+      .line1::before{
+        right: 29%;
+      }
+      .line1::after{
+        left: 29%;
+      }
+      .line2::after{
+        left: 27%;
+      }
+      .bok{
+        display: none;
+      }
+      .bac{
+        width: 600px;
+        bottom: 16%;
+      }
+      .books{
+        right: -13%;
+      }
+    }
+    @media screen and (max-width:767px) {
+      .banner{
+        background-size: cover;
+        background-position: center;
+      }
+      .line::after{
+        left: 24%;
+      }
+      .books{
+        display: none;
+      }
+      .svg1{
+        width: 550px;
+      }
+      .rec, .rect{
+        display: none;
+      }
+      
+    }
+    @media screen and (max-width:577px) {
+      .mrr{
+        margin: 0;
+      }
+      .svg1{
+        width: 360px;
+        /* bottom: 05%; */
+      }
+      .line::after{
+        left: 33%;
+      }
+      .co h1{
+        font-size: 25px;
+      }
+      .co{
+        padding: 25px;
+      }
+      .line1::after{
+        left: 8%;
+      }
+      .line1::before{
+        right: 8%;
+      }
+    }
+    @media screen and (max-width:577px) {
+      .line::after{
+        left: 35%;
+      }
+      nav a img{
+        width: 224px;
+      }
+      .line2::after{
+        left: 30%;
+      }
+
+    }
+
+</style>
+<body>
+  <header>
+    <div class="container-fluid p-0">
+        <div class="banner">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand mb-1" href="#">
+                        <img src="assets/Groupe Scolaire SAM.svg" alt="">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                      <ul class="navbar-nav m-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Admissions</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Our Community</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Academic Ambitions</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Our Prespective</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+                  <section>
+                  <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class=" col-lg-6 col-md-12">
+                        <div class="txt text-center ">
+                            <h1 class="txt1 mb-4">Welcome To The Future<br>Of Education</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse minus veniam excepturi corrupti nemo hic, neque natus fugit repudiandae molestias libero vitae, pariatur unde. Rerum quibusdam excepturi minus ut libero!</p>
+                            <button class="btn btn1 my-4">CONTACT FOR REGISTERATION</button>
+                          </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                  </div>
+                </section>
+            </div>
+        </div>
+    </div>
+  </header>
+
+  <section class="about1">
+    <div class="container-fluid p-0 py-5">
+      <img class="svg1" src="assets/background-world-map-1440x960-02.svg" alt="">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <h4 class="line">ABOUT US</h4>
+            <h1 class="txt2 mb-0">The Best Education System<br>That is Developed</h1>
+            <div class="row ">
+              <div class="col-md-11 col-12 py-4">
+                <div class="box">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nam unde sint modi rem iure libero quae, dignissimos id error veniam ex fugiat excepturi harum distinctio adipisci molestias? Hic, ullam.</p>
+                  <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore architecto ut, dolore hic praesentium non, facilis ipsum sequi, aperiam perferendis rem ea facere expedita vero dicta tempora corrupti quibusdam doloremque.</p>
+                  <img class="books" src="assets/shape2.png" alt="">
+                </div>
+              </div>
+              <div class="col-md-1">
+              </div>
+            </div>
+              <button class="btn btn2 mt-3">LEARN MORE</button>
+          </div>
+          <div class=" col-lg-6 col-md-12 p-0">
+            <img class="rec" src="assets/Rectangle 14.svg" alt="">
+            <div class="row mrr">
+              <div class="col-md-6 p-0 mt-5">
+                <img src="assets/ezgif.com-webp-to-jpg (7).png" alt="" width="100%">
+              </div>
+              <div class="col-md-6 p-0">
+                <img src="assets/dddac873b0943ca2d45e2419477193df.png" alt="" width="100%">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container  pb-5">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="cont">
+            <div class="row">
+              <div class="col-md-7">
+                <div class="co text-white">
+                  <h1 class="txt1 mb-0">Committed to learn</h1>
+                  <h1 class="txt1 mb-3">Excellenece In Education</h1>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum dolore magnam id, voluptate laboriosam rem voluptatem </p>
+                  <button class="btn btn1 my-3">GET YOUR CHILD REGISTERED</button>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <img class="rect" src="assets/Rectangle 14.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about2">
+    <div class="container py-5">
+      <div class="line1">
+        <h4 class="text-center">ABOUT US</h4>
+      </div>
+      <h1 class="txt2 text-center mb-4">What We Are Commiting to you</h1>
+          <div class="row cr">
+            <div class="col-md-3 p-0 my-3">
+              <div class="cn">
+                <h4 class="txt3 text-white"><span class="num">01</span> Primary Education</h4>
+                <button class="btn btn2 ">CHECK NOW</button>
+              </div>
+              <img src="assets/Group 134.png" alt="" width="100%">
+            </div>
+            <div class="col-md-3 p-0 my-3">
+              <div class="cn">
+                <h4 class="txt3 text-white"><span class="num">02</span> Secondary Education</h4>
+                <button class="btn btn2 ">CHECK NOW</button>
+              </div>
+              <img src="assets/Group 133.png" alt="" width="100%">
+            </div>
+            <div class="col-md-3 p-0 my-3">
+              <div class="cn">
+                <h4 class="txt3 text-white"><span class="num">03</span> Atheletics Sports</h4>
+                <button class="btn btn2 ">CHECK NOW</button>
+              </div>
+              <img src="assets/Group 132.png" alt="" width="100%">
+            </div>
+            <div class="col-md-3 p-0 my-3">
+              <div class="cn">
+                <h4 class="txt3 text-white"><span class="num">04</span> Foreign Education</h4>
+                <button class="btn btn2 ">CHECK NOW</button>
+              </div>
+              <img src="assets/Group 131.png" alt="" width="100%">
+            </div>
+          </div>
+    </div>
+  </section>
+
+
+<section class="events">
+    <div class="container-fluid">
+     <div class="row">
+      <div class="col-md-12">
+        <div class="ev">
+          <img class="bac" src="assets/background-world-map-1440x960-02 (1).svg" alt="">
+          <img class="bok" src="assets/shape2.png" alt="">
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h4 class="line2">EVENTS</h4>
+              <h1 class="txt2 ">Take A Part In</h1>
+              <h1 class="txt2">Upcoming Events</h1>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end align-items-end">
+              <p class="text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod consequatur delectus deleniti corporis nihil atque similique aspernatur </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 py-3">
+              <div class="card">
+                <div class="card-body">
+                  <h1 class="ct mb-3">Hult Bakstage</h1>
+                  <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit sed vero sit. Eaque, perspiciatis mollitia! Officiis hic ipsam aliquid doloremque ipsa optio commodi! Repellat rem adipisci sapiente voluptates aut?</p>
+                  <h6 class="se">SEE EVENTS <i class='bx bx-right-arrow-alt'></i></h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 py-3">
+              <div class="card">
+                <div class="card-body">
+                  <h1 class="ct mb-3">Virtual Skilss Lab</h1>
+                  <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit sed vero sit. Eaque, perspiciatis mollitia! Officiis hic ipsam aliquid doloremque ipsa optio commodi! Repellat rem adipisci sapiente voluptates aut?</p>
+                  <h6 class="se">SEE EVENTS <i class='bx bx-right-arrow-alt'></i></h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 py-3">
+              <div class="card">
+                <div class="card-body">
+                  <h1 class="ct mb-3">Undergraduate House</h1>
+                  <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit sed vero sit. Eaque, perspiciatis mollitia! Officiis hic ipsam aliquid doloremque ipsa optio commodi! Repellat rem adipisci sapiente voluptates aut?</p>
+                  <h6 class="se">SEE EVENTS <i class='bx bx-right-arrow-alt'></i></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn1 mt-3 ">SEE UPCOMING EVENTS</button>
+        </div>
+      </div>
+     </div>
+    </div>
+  </section>
+
+    <footer class="pt-5">
+      <div class="container-fluid p-0">
+        <div class="fr pt-4">
+          <div class="container pt-5">
+            <div class="row">
+              <div class="col-md-3">
+                <h5 class="txt4 pt-2">Group Scolaire SAM</h5>
+                <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, minus cupiditate voluptatibus velit maxime beatae impedit, nihil culpa ad magni officia ullam commodi ipsam, alias dignissimos? Dolore doloremque voluptate doloribus?</p>
+              </div>
+              <div class="col-md-3">
+                <h3 class="txt4">Academic</h3>
+                <p class="text-white"><a class="text-white" href="">Open House</a></p>
+                <p class="text-white"><a class="text-white" href="">Contact us</a></p>
+                <p class="text-white"><a class="text-white" href="">Entrance</a></p>
+                <p class="text-white"><a class="text-white" href="">Scholarship</a></p>
+              </div>
+              <div class="col-md-3">
+                <h3 class="txt4">Counseling</h3>
+                <p class="text-white"><a class="text-white" href="">Careers</a></p>
+                <p class="text-white"><a class="text-white" href="">Alumni</a></p>
+                <p class="text-white"><a class="text-white" href="">Giving</a></p>
+              </div>
+              <div class="col-md-3">
+                <h3 class="txt4">Policies</h3>
+                <p class="text-white"><a class="text-white" href="">Privacy Policy</a></p>
+                <p class="text-white"><a class="text-white" href="">History</a></p>
+                <p class="text-white"><a class="text-white" href="">Accessibilities</a></p>
+              </div>
+            </div>
+            <hr style="border: 1px solid;" class="text-white mt-5">
+            <h5 class="text-center text-white mb-0 pb-4">Copyright 2023 &copy; All rights reserved by Carmelita Dores</h5>
+          </div>
+        </div>
+      </div>
+    </footer>
+<!-- Bootstrap CDN -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+</body>
+</html>
